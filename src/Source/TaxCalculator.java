@@ -9,7 +9,7 @@ public class TaxCalculator {
        double extrahours = worker.getExtraHours();
        double tax = paymentperhour * extrahours;
        
-       if(worker.getHoursworked() > 96){
+       if(worker.getHoursworked() > 96 && worker.getSalary() > 0){
            if( verifyExentHours(worker) ){
                return tax / 2;
            }
