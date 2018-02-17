@@ -18,6 +18,13 @@ public class Worker {
         return salary;
     }
     
+    public double getExtraHours(){
+        return this.hoursworked - 96;
+    }
+    
+    public double getPaymentperHour(){
+        return this.salary / this.hoursworked;
+    }
     
     
 }

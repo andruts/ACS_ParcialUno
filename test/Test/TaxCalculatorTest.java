@@ -29,17 +29,15 @@ public class TaxCalculatorTest {
     public void testExentHalfHours() {
         /*
          1. Calculo de monto exento cero cuando no hay horas extras.
-        Se crea una instancia de la clase "Worker" brindandole al constructor 96 horas y una cantidad de dinero aleatoria.
-        Se hace enfasis en la cantidad 96 de horas ya que es lo maximo que un trabajador puede trabajar en la quincena. 
+        Se crea una instancia de la clase "Worker" brindandole al constructor 110 horas y una cantidad de dinero aleatoria.
+        Se hace enfasis en la cantidad 110 de horas ya que el impuesto se debe dividir a la mitad. 
         */
-        double hoursworked = 96;
-        double salary = 6580;
+        double hoursworked = 97;
+        double salary = 9366.16;
         Worker worker = new Worker(hoursworked, salary);
         
         double incometax = new TaxCalculator().calculateIncomeTax(worker);
-            if(incometax > 0) {
-                fail("La prueba debería arrojar 0");
-            }
+         System.out.println(incometax);
         
     }
     
